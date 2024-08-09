@@ -1,7 +1,23 @@
 body {
-  background-color: whitesmoke;
+  background-color: rgb(172, 159, 159);
+  min-height: 100vh;
+  margin: 0;
 }
 
 .container {
-  background-color: lightsteelblue;
+  background-color: rgb(120, 133, 150);
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  width: 100%;
+}
+
+input[type="number"],
+select {
+  width: 100%;
 }

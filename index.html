@@ -10,148 +10,151 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="m-3 p-5">
-    <header class="text-center py-4">
+  <body>
+    <header class="text-center">
       <h3 class="mb-3">Formulář pro objednávání letenek</h3>
     </header>
-    <div class="container m-3 p-5">
-      <main class="row justify-content-center">
-        <div class="col">
-          <form action="" class="row">
-            <div class="col-8">
-              <label for="destinace" class="col">
-                Destinace a cena letenky:
-              </label>
-              <select name="destinace" id="destinace" class="col form-select">
-                <option value="500" selected>Praha 500 Kč</option>
-                <option value="3000">Frankfurt 3000 Kč</option>
-                <option value="15000">New York 15000 Kč</option>
-                <option value="30000">Sydney 30000 Kč</option>
-              </select>
-            </div>
-            <div class="col-4">
-              <label for="pocetL" class="col"> Počet letenek: </label>
-              <select name="pocetL" id="pocetL" class="col form-select">
-                <option value="letenek1" selected>1</option>
-                <option value="letenek2">2</option>
-                <option value="letenek3">3</option>
-                <option value="letenek4">4</option>
-                <option value="letenek5">5</option>
-                <option value="letenek6">6</option>
-                <option value="letenek7">7</option>
-                <option value="letenek8">8</option>
-                <option value="letenek9">9</option>
-                <option value="letenek10">10</option>
-              </select>
-            </div>
-            <div class="form-check m-3">
-              <input
-                class="form-check-input zpet"
-                type="checkbox"
-                id="zpatecni"
-                value="2"
-              />
-              <label class="form-check-label" for="zpatecni">
-                Zpáteční letenka
-              </label>
-            </div>
-            <div class="row mb-3">
-              <fieldset>
-                <div class="check border col-12 p-2">
-                  <legend class="mb-3">Třída</legend>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="class"
-                      id="economy"
-                      checked
-                    />
-                    <label class="form-check-label" for="economy">
-                      Economy class
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="class"
-                      id="business"
-                    />
-                    <label class="form-check-label" for="business">
-                      Business class (+ 25 %)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="class"
-                      id="royal"
-                    />
-                    <label class="form-check-label" for="royal">
-                      Royal class (+ 50 %)
-                    </label>
-                  </div>
-                </div>
-                <div class="row my-3">
-                  <label for="vyslCena" class="col-4 col-form-label">
-                    Výsledná cena:
+    <div class="container">
+      <main class="row">
+        <form>
+          <div>
+            <label for="destinace" class="col"> Destinace: </label>
+            <select name="destinace" id="destinace" class="col form-select">
+              <option value="500" selected>Praha 500 Kč</option>
+              <option value="3000">Frankfurt 3000 Kč</option>
+              <option value="15000">New York 15000 Kč</option>
+              <option value="30000">Sydney 30000 Kč</option>
+            </select>
+          </div>
+          <div>
+            <label for="pocetL" class="col"> Počet: </label>
+            <select name="pocetL" id="pocetL" class="col form-select">
+              <option value="letenek1" selected>1</option>
+              <option value="letenek2">2</option>
+              <option value="letenek3">3</option>
+              <option value="letenek4">4</option>
+              <option value="letenek5">5</option>
+              <option value="letenek6">6</option>
+              <option value="letenek7">7</option>
+              <option value="letenek8">8</option>
+              <option value="letenek9">9</option>
+              <option value="letenek10">10</option>
+            </select>
+          </div>
+          <div class="form-check m-2">
+            <input
+              class="form-check-input zpet"
+              type="checkbox"
+              id="zpatecni"
+              value="2"
+            />
+            <label class="form-check-label" for="zpatecni">
+              Zpáteční letenka
+            </label>
+          </div>
+          <div class="row mb-3">
+            <fieldset>
+              <div class="check border mb-3 p-2">
+                <legend class="mb-3">Třída</legend>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="class"
+                    id="economy"
+                    checked
+                  />
+                  <label class="form-check-label" for="economy">
+                    Economy class
                   </label>
-                  <div class="col-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="vyCena"
-                      readonly
-                      placeholder="Výsledná cena"
-                    />
-                  </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="maxCena" class="col-4 col-form-label">
-                    Maximální cena:
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="class"
+                    id="business"
+                  />
+                  <label class="form-check-label" for="business">
+                    Business class (+ 25 %)
                   </label>
-                  <div class="col-6">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="maxCena"
-                      placeholder="Maximální cena"
-                    />
-                  </div>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="class"
+                    id="royal"
+                  />
+                  <label class="form-check-label" for="royal">
+                    Royal class (+ 50 %)
+                  </label>
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <label for="vyslCena"> Výsledná cena: </label>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control mb-3"
+                    id="vyCena"
+                    readonly
+                    placeholder="Výsledná cena"
+                  />
+                </div>
+                <div class="row justify-content-center">
                   <button
                     type="button"
-                    id="celkCena"
+                    id="celCena"
                     onclick="payment()"
-                    class="btn btn-primary main-btn col-2"
+                    class="btn btn-primary text-center justify-content-center col-4"
                   >
-                    Spočítej a ověř
+                    Spočítej
                   </button>
                 </div>
-                <div class="mb-3 row">
-                  <label for="Textarea1" class="form-label col-4"
-                    >Poznámka :</label
-                  >
-                  <textarea
-                    name="textarea1"
-                    class="col-8 area"
-                    rows="10"
-                    cols="40"
-                    placeholder="Zde vložte poznámku"
-                  ></textarea>
+              </div>
+
+              <div class="row mb-3 justify-content-center">
+                <label for="maxCena"> Maximální cena: </label>
+                <div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="maxCena"
+                    placeholder="Maximální cena"
+                  />
                 </div>
-              </fieldset>
-            </div>
-          </form>
-        </div>
+              </div>
+              <div class="mb-3 row justify-content-center">
+                <label for="Textarea1">Poznámka :</label>
+                <textarea
+                  name="textarea1"
+                  class="col-10"
+                  rows="10"
+                  cols="40"
+                  placeholder="Zde vložte poznámku"
+                ></textarea>
+              </div>
+              <div class="justify-content-center row">
+                <button
+                  type="button"
+                  id="celkCena"
+                  onclick="control()"
+                  class="btn btn-success text-center justify-content-center col-4"
+                >
+                  Objednat
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </form>
       </main>
-      <!-- <footer class="text-center">
-        <div class="bg-primary">
-          <p class="text-white">&copy Pittris 2024</p>
-        </div>
-      </footer> -->
     </div>
     <script src="script.js"></script>
+    <footer class="text-center">
+      <div>
+        <p>&copy Pittris 2024</p>
+      </div>
+    </footer>
   </body>
 </html>
